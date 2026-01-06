@@ -27,3 +27,7 @@ I made a few other little assets
 <img width="512" height="512" alt="Console_Pause_Button_scaled_32x_pngcrushed" src="https://github.com/user-attachments/assets/03394d9d-b172-4c9a-adf5-faf847d420ec" />
 <img width="512" height="512" alt="Console_Settings_Button_scaled_32x_pngcrushed" src="https://github.com/user-attachments/assets/ae530ef3-9ffd-4124-8fc1-c2b756f09d5a" />
 <img width="512" height="512" alt="Console_Sparkles_scaled_32x_pngcrushed" src="https://github.com/user-attachments/assets/f33a7e18-e7eb-4c75-866b-91942e6b2041" />
+
+Tuesday Jan 6 - 22:00 - SwiftDust
+---
+I set up a world and player with a script. It's not much, but at least I got something done. Also I brainstormed a bit. The idea is basically that you shake for maximally 2 seconds to jump. You can tilt to move left/right during the jump. I got inspired by the little game you could always play on the google play store, I believe it also worked with tilting. Hopefully I can do something more tomorrow, but I'm really busy.
