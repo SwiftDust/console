@@ -11,9 +11,19 @@ I finished setting up the files for the game, and I changed some settings for pi
 Monday Jan 5 - 4:20ish - KittyCat
 ---
 I forgot to journal this yesterday becuase I was not at my computer, but I was playing around with character ideas in Procreate and I made this little guy! Unfortunately, because it was I 32x32 pixel canvas, Procreate's built in timelapseing function didn't work. I didn't know this before, but I guess there's a minimum canvas size for it to work, so I guess I'll be manually recording it from now on for my small pixel art assets. Thankfully, Procreate does have a feature where it tells you how long you spent on a canvas, so I have that!
+
 ![Untitled_Artwork_scaled_16x_minified](https://github.com/user-attachments/assets/a963ab92-311b-4360-a348-272601d36716)
 ![IMG_F7C16179F947-1](https://github.com/user-attachments/assets/3e5fa042-d2d9-4ce8-ac56-9c06c3c26d63)
 
 Tuesday Jan 6 - 10:25ish - KittyCat
 ---
 I took a few minutes to set up a barebones main menu. It's not connected to anything, but it's just a basic setup.
+
+Tuesday Jan 6 - time unknown - KittyCat
+---
+I made a few other little assets
+
+<img width="512" height="512" alt="Console_Play_Button_scaled_32x_pngcrushed" src="https://github.com/user-attachments/assets/8b8b131c-9224-49b9-a940-08c76ce198a4" />
+<img width="512" height="512" alt="Console_Pause_Button_scaled_32x_pngcrushed" src="https://github.com/user-attachments/assets/03394d9d-b172-4c9a-adf5-faf847d420ec" />
+<img width="512" height="512" alt="Console_Settings_Button_scaled_32x_pngcrushed" src="https://github.com/user-attachments/assets/ae530ef3-9ffd-4124-8fc1-c2b756f09d5a" />
+<img width="512" height="512" alt="Console_Sparkles_scaled_32x_pngcrushed" src="https://github.com/user-attachments/assets/f33a7e18-e7eb-4c75-866b-91942e6b2041" />
