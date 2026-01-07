@@ -1,4 +1,4 @@
- # Console
+# Console
 
 Monday Jan 5 - 2:20ish - KittyCat
 ---
@@ -27,3 +27,11 @@ I made a few other little assets
 <img width="512" height="512" alt="Console_Pause_Button_scaled_32x_pngcrushed" src="https://github.com/user-attachments/assets/03394d9d-b172-4c9a-adf5-faf847d420ec" />
 <img width="512" height="512" alt="Console_Settings_Button_scaled_32x_pngcrushed" src="https://github.com/user-attachments/assets/ae530ef3-9ffd-4124-8fc1-c2b756f09d5a" />
 <img width="512" height="512" alt="Console_Sparkles_scaled_32x_pngcrushed" src="https://github.com/user-attachments/assets/f33a7e18-e7eb-4c75-866b-91942e6b2041" />
+
+Tuesday Jan 6 - time unknown - KittyCat
+---
+I forgot to journal this yesterday, but I made a neon-style tilemap! I might add more to it in the future, but I think I like it so far. (sorry the timelapse is such low quality, I forgot to set it to best instead of good)
+![Screenshot 2026-01-07 at 2 27 27 PM](https://github.com/user-attachments/assets/493fa0ba-ebd5-4252-aca4-9b484652502b)
+![IMG_35B99638BB8B-1](https://github.com/user-attachments/assets/b3e9fcb0-6188-4f55-8a1b-494d40768d07)
+https://github.com/user-attachments/assets/136825f9-c8cf-4a3e-b9b4-fae7ea335308
+
