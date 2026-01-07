@@ -35,3 +35,12 @@ I forgot to journal this yesterday, but I made a neon-style tilemap! I might add
 ![IMG_35B99638BB8B-1](https://github.com/user-attachments/assets/b3e9fcb0-6188-4f55-8a1b-494d40768d07)
 https://github.com/user-attachments/assets/136825f9-c8cf-4a3e-b9b4-fae7ea335308
 
+Tuesday Jan 6 - 22:00 - SwiftDust
+---
+I set up a world and player with a script. It's not much, but at least I got something done. Also I brainstormed a bit. The idea is basically that you shake for maximally 2 seconds to jump. You can tilt to move left/right during the jump. I got inspired by the little game you could always play on the google play store, I believe it also worked with tilting. Hopefully I can do something more tomorrow, but I'm really busy.
+
+Wednesday Jan 7 - 17:15 - SwiftDust
+---
+I made the player script in ~30 minutes! It needed some changing because our console is going to be tilt'n'shake. Wow, I just thought of this but it's a pretty fun name actually! Basically when you press A and D will correspond to the console being "level" and thus you don't move. When you press A or D it's tilted to one of the sides and it will move. Jump is spacebar and you can press it for 2 seconds max.
+
+
