@@ -31,3 +31,7 @@ I made a few other little assets
 Tuesday Jan 6 - 22:00 - SwiftDust
 ---
 I set up a world and player with a script. It's not much, but at least I got something done. Also I brainstormed a bit. The idea is basically that you shake for maximally 2 seconds to jump. You can tilt to move left/right during the jump. I got inspired by the little game you could always play on the google play store, I believe it also worked with tilting. Hopefully I can do something more tomorrow, but I'm really busy.
+
+Wednesday Jan 7 - 17:15 - SwiftDust
+---
+I made the player script in ~30 minutes! It needed some changing because our console is going to be tilt'n'shake. Wow, I just thought of this but it's a pretty fun name actually! Basically when you press A and D will correspond to the console being "level" and thus you don't move. When you press A or D it's tilted to one of the sides and it will move. Jump is spacebar and you can press it for 2 seconds max.
