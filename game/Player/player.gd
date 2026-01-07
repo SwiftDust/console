@@ -5,18 +5,40 @@ const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
 
 
+@onready var burst_timer = $BurstTimer
+var jumping := false
+
+
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 
 	if Input.is_action_just_pressed("jump") and is_on_floor():
-		velocity.y = JUMP_VELOCITY
-
+		burst_timer.start()
+		jumping = true
+	
+	if not Input.is_action_pressed("jump"):
+		burst_timer.stop()
+		jumping = false
+		
+	if jumping:
+		velocity.y = JUMP_VELOCITY 
+	
 	# TODO: custom tilting behavior
-	var direction := Input.get_axis("ui_left", "ui_right")
-	if direction:
+	var direction := Input.get_axis("tilt_left", "tilt_right")
+	var both_pressed := false
+	if Input.is_action_pressed("tilt_left") and Input.is_action_pressed("tilt_right"):
+		print("both actions are pressed")
+		direction = 0
+		both_pressed = true
+	
+	if not direction == 0:
 		velocity.x = direction * SPEED
-	else:
+	if both_pressed == true:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
-
+		
 	move_and_slide()
+
+
+func _on_burst_timer_timeout() -> void:
+	jumping = false
