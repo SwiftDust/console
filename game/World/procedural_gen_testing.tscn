@@ -1,0 +1,43 @@
+[gd_scene load_steps=7 format=3 uid="uid://dsejckkhddqks"]
+
+[ext_resource type="Script" uid="uid://tisadn6ahrd5" path="res://World/procedural_gen_testing.gd" id="1_28nu2"]
+[ext_resource type="Texture2D" uid="uid://ck773a5wt2iol" path="res://World/tilemapx2.png" id="1_ca8h2"]
+[ext_resource type="Script" uid="uid://lfw5o347m2er" path="res://World/ground.gd" id="3_k4iyi"]
+[ext_resource type="PackedScene" uid="uid://cx2mv5nb0ytjf" path="res://Player/player.tscn" id="4_0a6sp"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_28nu2"]
+texture = ExtResource("1_ca8h2")
+texture_region_size = Vector2i(32, 32)
+18:10/0 = 0
+19:10/0 = 0
+18:11/0 = 0
+19:11/0 = 0
+5:6/0 = 0
+4:6/0 = 0
+3:6/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+5:4/0 = 0
+4:4/0 = 0
+3:4/0 = 0
+7:4/0 = 0
+7:5/0 = 0
+7:6/0 = 0
+9:5/0 = 0
+9:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+
+[sub_resource type="TileSet" id="TileSet_28nu2"]
+tile_size = Vector2i(32, 32)
+physics_layer_0/collision_layer = 1
+sources/2 = SubResource("TileSetAtlasSource_28nu2")
+
+[node name="procedural-gen-testing" type="Node2D"]
+script = ExtResource("1_28nu2")
+
+[node name="Ground" type="TileMapLayer" parent="."]
+tile_set = SubResource("TileSet_28nu2")
+rendering_quadrant_size = 32
+script = ExtResource("3_k4iyi")
+
+[node name="Player" parent="." instance=ExtResource("4_0a6sp")]
