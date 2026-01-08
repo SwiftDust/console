@@ -43,4 +43,7 @@ Wednesday Jan 7 - 17:15 - SwiftDust
 ---
 I made the player script in ~30 minutes! It needed some changing because our console is going to be tilt'n'shake. Wow, I just thought of this but it's a pretty fun name actually! Basically when you press A and D will correspond to the console being "level" and thus you don't move. When you press A or D it's tilted to one of the sides and it will move. Jump is spacebar and you can press it for 2 seconds max.
 
+Thursday Jan 8 - 10:30 - KittyCat
+---
+I started playing around with procedural generation for about 30mins. I'm not quite sure what I'm doing yet, but I think I'm getting somewhere. It's really hard becuase there are plenty of tutorials for top down world generation, but not really for vertical platform generation
 
