@@ -1,1 +1,99 @@
 extends Node2D
+
+@onready var camera_2d: Camera2D = $Player/Camera2D
+#@onready var player_collision_shape_node: CollisionShape2D = $Player/CollisionShape2D
+@onready var player: CharacterBody2D = $Player
+
+@onready var player_collision_shape_node = player.get_node("CollisionShape2D")
+@onready var player_collision_shape = player_collision_shape_node.shape
+@onready var ground: TileMapLayer = $Ground
+
+var platforms := []
+var height_addition: float = 5.0
+var screen_size: Vector2 = DisplayServer.screen_get_size()
+var screen_x: float = screen_size.x
+var screen_y: float = screen_size.y
+
+var camera_size: Vector2 = Vector2()
+var camera_rect: Rect2 = Rect2()
+
+
+func _ready() -> void:
+	#spawn_platforms(5)
+	randomize()
+	spawn_tilemap(5)
+	
+func spawn_tilemap(amount: int) -> void:
+	var platform_position = {"x": 0, "y": 0}
+	if is_instance_valid(camera_2d):
+		camera_size = get_viewport_rect().size * camera_2d.zoom
+		camera_rect = Rect2(camera_2d.get_screen_center_position() - camera_size / 2, camera_size)
+		print(camera_size)
+		print(camera_rect)
+	else:
+		print(camera_2d)
+	for i in range(amount):
+		#var margin := 64
+		
+		var highest_y = camera_rect.end.y
+		#for p in platforms:
+			#if is_instance_valid(p):
+				#if p.global_position.y < highest_y:
+					#highest_y = p.global_position.y
+		
+		#var height_increment = player_collision_shape.size.y * player_collision_shape_node.global_scale.y * 3.5
+		#var margin := 64
+		#platform_position = {
+			#"x": randf_range(camera_rect.position.x, camera_rect.position.x + camera_rect.size.x),
+				##"y": highest_y - height_increment
+			#"y": randf_range(camera_rect.position.y, camera_rect.position.y + camera_rect.size.y)
+		#}
+		
+		if is_instance_valid(player_collision_shape) and is_instance_valid(player_collision_shape_node):
+			var height_increment = player_collision_shape.size.y * player_collision_shape_node.global_scale.y * 3.5
+			var margin := 64
+			platform_position = {
+				#"x": randf_range(0, camera_rect.end.x - margin),
+				#"y": randf_range(0, camera_rect.end.y - margin)
+				"x": randi_range(0, camera_rect.end.x),
+				"y": randi_range(0, camera_rect.end.y)
+			}
+			
+			print(platform_position)
+			print(platform_position["x"])
+			
+		
+		#var platform_position = Vector2i(randi_range(0, screen_x) - margin, randi_range(0, screen_y) - margin)
+		var tile_position: Vector2 = Vector2(platform_position["x"], platform_position["y"])
+		var cell_coords: Vector2i = ground.local_to_map(tile_position)
+		ground.set_cell(cell_coords, 2, Vector2i(9, 5))
+		
+
+#func spawn_platforms(amount: int) -> void:
+	#var camera_size: Vector2 = Vector2()
+	#var camera_rect: Rect2 = Rect2()
+	#
+	#if is_instance_valid(camera_2d):
+		#camera_size = get_viewport_rect().size * camera_2d.zoom
+		#camera_rect = Rect2(camera_2d.get_screen_center_position() - camera_size / 2, camera_size)
+	#
+	#var highest_y = camera_rect.end.y
+	#for p in platforms:
+		#if is_instance_valid(p):
+			#if p.global_position.y < highest_y:
+				#highest_y = p.global_position.y
+				#
+	#for i in range(amount):
+		##var platform: Node
+		#var platform_position = {"x": 0, "y": 0}
+		#
+		#if is_instance_valid(player_collision_shape) and is_instance_valid(player_collision_shape_node):
+			#var height_increment = player_collision_shape.size.y * player_collision_shape_node.global_scale.y * 3.5
+			#var margin := 20
+			#platform_position = {
+				#"x": randf_range(0, camera_rect.end.x - margin),
+				#"y": highest_y - height_increment
+			#}
+			#ground.set_cell(Vector2i(platform_position["x"], platform_position["y"]), 2, Vector2i(9, 5))
+			##print(platform_position["x"])
+			#
