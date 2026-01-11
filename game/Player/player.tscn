@@ -1,64 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://cx2mv5nb0ytjf"]
+[gd_scene load_steps=4 format=3 uid="uid://cx2mv5nb0ytjf"]
 
 [ext_resource type="Script" uid="uid://b0icr025pj378" path="res://Player/player.gd" id="1_4ntmi"]
 [ext_resource type="Texture2D" uid="uid://btb2jfylvnofv" path="res://icon.svg" id="1_l8h54"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4ntmi"]
 size = Vector2(130, 127)
-
-[sub_resource type="Animation" id="Animation_btcbx"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Camera2D:offset")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0, 0)]
-}
-
-[sub_resource type="Animation" id="Animation_4ntmi"]
-resource_name = "move_left"
-length = 0.5
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Camera2D:offset")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(100, -50), Vector2(-100, -50)]
-}
-
-[sub_resource type="Animation" id="Animation_gwnis"]
-resource_name = "move_right"
-length = 0.5
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Camera2D:offset")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(-100, 50), Vector2(100, -50)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_k53q1"]
-_data = {
-&"RESET": SubResource("Animation_btcbx"),
-&"move_left": SubResource("Animation_4ntmi"),
-&"move_right": SubResource("Animation_gwnis")
-}
 
 [node name="Player" type="CharacterBody2D"]
 scale = Vector2(0.5, 0.5)
@@ -74,17 +20,5 @@ shape = SubResource("RectangleShape2D_4ntmi")
 [node name="BurstTimer" type="Timer" parent="."]
 wait_time = 2.0
 one_shot = true
-
-[node name="Camera2D" type="Camera2D" parent="."]
-enabled = false
-position_smoothing_enabled = true
-position_smoothing_speed = 2.0
-rotation_smoothing_enabled = true
-rotation_smoothing_speed = 2.0
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-&"": SubResource("AnimationLibrary_k53q1")
-}
 
 [connection signal="timeout" from="BurstTimer" to="." method="_on_burst_timer_timeout"]

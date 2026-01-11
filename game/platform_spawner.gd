@@ -1,12 +1,13 @@
-extends Node2D
+class_name PlatformSpawner extends Node2D
 
-@onready var camera_2d: Camera2D = $Player/Camera2D
+
+@onready var camera_2d: Camera2D = $"../Player/Camera2D"
 #@onready var player_collision_shape_node: CollisionShape2D = $Player/CollisionShape2D
-@onready var player: CharacterBody2D = $Player
+@onready var player: CharacterBody2D = $"../Player"
 
 @onready var player_collision_shape_node = player.get_node("CollisionShape2D")
 @onready var player_collision_shape = player_collision_shape_node.shape
-@onready var ground: TileMapLayer = $Ground
+@onready var ground: TileMapLayer = $"../Ground"
 
 var platforms := []
 var height_addition: float = 5.0
