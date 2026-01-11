@@ -8,10 +8,6 @@
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_28nu2"]
 texture = ExtResource("1_ca8h2")
 texture_region_size = Vector2i(32, 32)
-18:10/0 = 0
-19:10/0 = 0
-18:11/0 = 0
-19:11/0 = 0
 5:6/0 = 0
 4:6/0 = 0
 3:6/0 = 0
@@ -21,9 +17,18 @@ texture_region_size = Vector2i(32, 32)
 5:4/0 = 0
 4:4/0 = 0
 3:4/0 = 0
+7:4/next_alternative_id = 5
 7:4/0 = 0
+7:4/3 = 3
+7:4/3/transpose = true
+7:5/next_alternative_id = 3
 7:5/0 = 0
+7:5/2 = 2
+7:5/2/transpose = true
+7:6/next_alternative_id = 3
 7:6/0 = 0
+7:6/2 = 2
+7:6/2/transpose = true
 9:5/0 = 0
 9:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 

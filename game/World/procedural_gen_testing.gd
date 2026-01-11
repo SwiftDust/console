@@ -47,9 +47,46 @@ func spawn_tilemap(amount: int) -> void:
 			print(platform_position)
 			print(platform_position["x"])
 			
-	
-		# idk why this took me so long
-		var tile_position: Vector2 = Vector2(platform_position["x"], platform_position["y"])
-		var cell_coords: Vector2i = ground.local_to_map(tile_position)
-		ground.set_cell(cell_coords, 2, Vector2i(9, 5))
+		var tile_left =  Vector2i(7, 4)
+		var tile_middle = Vector2i(7, 5)
+		var tile_right = Vector2i(7, 6)
+		var tiles = [tile_left, tile_middle, tile_right]
+
+		var left_tile_x = platform_position["x"] - 1
+		#print(platform_position["x"])
+		#print(left_tile_x)
+
+		var left_tile_position: Vector2 = Vector2(platform_position["x"] - 1, platform_position["y"])
+		var middle_tile_position: Vector2 = Vector2(platform_position["x"], platform_position["y"])
+		var right_tile_position: Vector2 = Vector2(platform_position["x"] + 1, platform_position["y"])
+		
+		print(left_tile_position)
+		print(middle_tile_position)
+		print(right_tile_position)
+		var left_cell_coords: Vector2i = ground.local_to_map(left_tile_position)
+		var middle_cell_coords: Vector2i = ground.local_to_map(middle_tile_position)
+		var right_cell_coords: Vector2i = ground.local_to_map(right_tile_position)
+		
+		
+		for tile in tiles:
+			print("left cell coords" + str(left_cell_coords))
+			print("middle cell coords" + str(middle_cell_coords))
+			print("right cell coords" + str(right_cell_coords))
+			match tile:
+				tile_left:
+					print("tile left set")
+					print(left_cell_coords)
+					ground.set_cell(left_cell_coords, 2, tile)
+				tile_middle:
+					print("tile middle set")
+					print(middle_cell_coords)
+					ground.set_cell(middle_cell_coords, 2, tile)
+				tile_right:
+					print("tile right set")
+					print(right_cell_coords)
+					ground.set_cell(right_cell_coords, 2, tile)
+			
+			# the coords are going to be different
+			
+		#ground.set_cell(cell_coords, 2, Vector2i(9, 5), 2)
 		
