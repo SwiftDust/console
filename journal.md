@@ -52,4 +52,12 @@ Friday Jan 9 - 10:00-11:00 - KittyCat
 OMG I FINALLY MADE SOME PROGRESS!! It took a lot of work, but I finally figured out how to get a certain number of tiles to initally spawn in the camera's viewing area. From here, I can figure out how to make it so we can keep generating as we go upwards. I also need to figure out how to make the generation not too hard to play through, but I think that's a problem for future me
 <img width="811" height="546" alt="Screenshot 2026-01-09 at 11 05 09 AM" src="https://github.com/user-attachments/assets/12fd950c-5a72-4ee4-921d-0680736a35b9" />
 
+Sunday Jan 11 - late evening most likely - SwiftDust
+---
+I huddled with KittyCat, and also later when she was gone I tried to fix the procedural gen -- it was really hard but I'm pretty happy I didn't give up!
+<img width="1332" height="849" alt="Skermskoot 2026-01-11 230456" src="https://github.com/user-attachments/assets/e87fcc52-e346-4d30-9582-e969339729f0" />
 
+Tuesday Jan 13 late evening - Wednesday Jan 14 early morning - SwiftDust
+---
+Finally been able to finish the MVP. And that in exam week 🫩
+<img width="1412" height="908" alt="Skermskoot 2026-01-14 000033" src="https://github.com/user-attachments/assets/f916ca31-9080-438f-86b9-20a722123bd7" />
