@@ -43,4 +43,13 @@ Wednesday Jan 7 - 17:15 - SwiftDust
 ---
 I made the player script in ~30 minutes! It needed some changing because our console is going to be tilt'n'shake. Wow, I just thought of this but it's a pretty fun name actually! Basically when you press A and D will correspond to the console being "level" and thus you don't move. When you press A or D it's tilted to one of the sides and it will move. Jump is spacebar and you can press it for 2 seconds max.
 
+Thursday Jan 8 - 10:30 - KittyCat
+---
+I started playing around with procedural generation for about 30mins. I'm not quite sure what I'm doing yet, but I think I'm getting somewhere. It's really hard becuase there are plenty of tutorials for top down world generation, but not really for vertical platform generation
+
+Friday Jan 9 - 10:00-11:00 - KittyCat
+---
+OMG I FINALLY MADE SOME PROGRESS!! It took a lot of work, but I finally figured out how to get a certain number of tiles to initally spawn in the camera's viewing area. From here, I can figure out how to make it so we can keep generating as we go upwards. I also need to figure out how to make the generation not too hard to play through, but I think that's a problem for future me
+<img width="811" height="546" alt="Screenshot 2026-01-09 at 11 05 09 AM" src="https://github.com/user-attachments/assets/12fd950c-5a72-4ee4-921d-0680736a35b9" />
+
 
