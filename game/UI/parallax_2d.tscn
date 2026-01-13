@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://h71a5nxfc8es"]
+
+[ext_resource type="Texture2D" uid="uid://dlwxgh3vnsinn" path="res://arboles3.png" id="1_2vm78"]
+
+[node name="Parallax2D" type="Parallax2D"]
+repeat_size = Vector2(1, 1)
+repeat_times = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(4, 4)
+texture = ExtResource("1_2vm78")

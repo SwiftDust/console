@@ -1,10 +1,10 @@
 [gd_scene load_steps=9 format=3 uid="uid://brhryees3jfmp"]
 
-[ext_resource type="Texture2D" uid="uid://btb2jfylvnofv" path="res://icon.svg" id="1_8a836"]
+[ext_resource type="PackedScene" uid="uid://6rf36udqtfc5" path="res://UI/score.tscn" id="1_3f78f"]
 [ext_resource type="PackedScene" uid="uid://cx2mv5nb0ytjf" path="res://Player/player.tscn" id="1_62w18"]
 [ext_resource type="PackedScene" uid="uid://3b770jsr0yhd" path="res://World/platform_spawner.tscn" id="1_k8do8"]
+[ext_resource type="PackedScene" uid="uid://h71a5nxfc8es" path="res://UI/parallax_2d.tscn" id="2_k8do8"]
 [ext_resource type="Texture2D" uid="uid://ck773a5wt2iol" path="res://World/tilemapx2.png" id="3_3f78f"]
-[ext_resource type="Script" uid="uid://lfw5o347m2er" path="res://World/ground.gd" id="4_k8do8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bkhv4"]
 texture = ExtResource("3_3f78f")
@@ -49,10 +49,15 @@ size = Vector2(1113, 29)
 
 [node name="World" type="Node2D"]
 
+[node name="Parallax2D" parent="." instance=ExtResource("2_k8do8")]
+scale = Vector2(1.36, 1.36)
+scroll_offset = Vector2(64, 32.21)
+
 [node name="Ground" type="TileMapLayer" parent="."]
 tile_set = SubResource("TileSet_yf0ba")
 rendering_quadrant_size = 32
-script = ExtResource("4_k8do8")
+
+[node name="Score" parent="." instance=ExtResource("1_3f78f")]
 
 [node name="PlatformSpawner" parent="." instance=ExtResource("1_k8do8")]
 position = Vector2(230, 56)
@@ -63,11 +68,6 @@ position = Vector2(57, 214)
 [node name="Camera2D" type="Camera2D" parent="Player"]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
-
-[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
-position = Vector2(399.5, 371)
-scale = Vector2(8.6796875, 0.21875)
-texture = ExtResource("1_8a836")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(399.5, 369.5)
